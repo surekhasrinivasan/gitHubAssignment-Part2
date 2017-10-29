@@ -1,0 +1,397 @@
+surekhasrinivasan:~/workspace $ unzip "sample files.zip"
+
+Archive:  sample files.zip
+   creating: round1b/
+  inflating: round1b/.DS_Store       
+   creating: __MACOSX/
+   creating: __MACOSX/round1b/
+  inflating: __MACOSX/round1b/._.DS_Store  
+   creating: round1b/stable/
+  inflating: round1b/stable/B-small-attempt0.in  
+   creating: __MACOSX/round1b/stable/
+  inflating: __MACOSX/round1b/stable/._B-small-attempt0.in  
+  inflating: round1b/stable/ouputS.txt  
+  inflating: round1b/stable/stable.rb  
+   creating: round1b/steed/
+  inflating: round1b/steed/.DS_Store  
+   creating: __MACOSX/round1b/steed/
+  inflating: __MACOSX/round1b/steed/._.DS_Store  
+  inflating: round1b/steed/A-large.in  
+  inflating: __MACOSX/round1b/steed/._A-large.in  
+  inflating: round1b/steed/A-small-attempt2.in  
+  inflating: __MACOSX/round1b/steed/._A-small-attempt2.in  
+  inflating: round1b/steed/output.txt  
+  inflating: round1b/steed/outputL.txt  
+  inflating: round1b/steed/steed.rb  
+  inflating: __MACOSX/round1b/steed/._steed.rb  
+
+surekhasrinivasan:~/workspace $ cd round1b
+
+surekhasrinivasan:~/workspace/round1b $ git init
+Initialized empty Git repository in /home/ubuntu/workspace/round1b/.git/
+
+surekhasrinivasan:~/workspace/round1b (master) $ touch file1.txt
+
+surekhasrinivasan:~/workspace/round1b (master) $ c9 file1.txt 
+
+surekhasrinivasan:~/workspace/round1b (master) $ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        file1.txt
+        stable/
+        steed/
+
+nothing added to commit but untracked files present (use "git add" to track)
+surekhasrinivasan:~/workspace/round1b (master) $ git add .
+
+surekhasrinivasan:~/workspace/round1b (master) $ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   file1.txt
+        new file:   stable/B-small-attempt0.in
+        new file:   stable/ouputS.txt
+        new file:   stable/stable.rb
+        new file:   steed/A-large.in
+        new file:   steed/A-small-attempt2.in
+        new file:   steed/output.txt
+        new file:   steed/outputL.txt
+        new file:   steed/steed.rb
+
+
+surekhasrinivasan:~/workspace/round1b (master) $ git commit -m "Create a new file and add at least 3 lines to it."                                               
+[master (root-commit) a210ae3] Create a new file and add at least 3 lines to it.
+ 9 files changed, 8493 insertions(+)
+ create mode 100644 file1.txt
+ create mode 100644 stable/B-small-attempt0.in
+ create mode 100644 stable/ouputS.txt
+ create mode 100644 stable/stable.rb
+ create mode 100644 steed/A-large.in
+ create mode 100644 steed/A-small-attempt2.in
+ create mode 100644 steed/output.txt
+ create mode 100644 steed/outputL.txt
+ create mode 100644 steed/steed.rb
+
+surekhasrinivasan:~/workspace/round1b (master) $ git status
+On branch master
+nothing to commit, working tree clean
+
+surekhasrinivasan:~/workspace/round1b (master) $ mkdir newDirectory
+
+surekhasrinivasan:~/workspace/round1b (master) $ cd newDirectory/
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ touch file2.txt
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ c9 file2.txt 
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ./
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ git add .
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   file2.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../file1.txt
+
+
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ cd ..
+
+surekhasrinivasan:~/workspace/round1b (master) $ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   newDirectory/file2.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file1.txt
+
+
+surekhasrinivasan:~/workspace/round1b (master) $ git commit -m "Create a second file inside of a new directory and modify any existing file."
+[master f3716e4] Create a second file inside of a new directory and modify any existing file.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newDirectory/file2.txt
+surekhasrinivasan:~/workspace/round1b (master) $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+surekhasrinivasan:~/workspace/round1b (master) $ git add . 
+
+surekhasrinivasan:~/workspace/round1b (master) $ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   file1.txt
+
+
+surekhasrinivasan:~/workspace/round1b (master) $ git commit -m "Create a second file inside of a new directory and modify any existing file."
+[master b27a17b] Create a second file inside of a new directory and modify any existing file.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+surekhasrinivasan:~/workspace/round1b (master) $ git status
+On branch master
+nothing to commit, working tree clean
+
+surekhasrinivasan:~/workspace/round1b (master) $ cd newDirectory/
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ rm file2.txt
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ ls
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    file2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ cd ..
+
+surekhasrinivasan:~/workspace/round1b (master) $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    newDirectory/file2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+surekhasrinivasan:~/workspace/round1b (master) $ git commit -m "Delete any file."
+On branch master
+Changes not staged for commit:
+        deleted:    newDirectory/file2.txt
+
+no changes added to commit
+
+surekhasrinivasan:~/workspace/round1b (master) $ cd newDirectory/
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ git commit -m "Delete any file."
+On branch master
+Changes not staged for commit:
+        deleted:    file2.txt
+
+no changes added to commit
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    file2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ git add .
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    file2.txt
+
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ git commit -m "Delete any file."
+[master 69fe30b] Delete any file.
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 newDirectory/file2.txt
+
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ git status
+On branch master
+nothing to commit, working tree clean
+surekhasrinivasan:~/workspace/round1b/newDirectory (master) $ cd ..
+
+surekhasrinivasan:~/workspace/round1b (master) $ git checkout -b round2b
+Switched to a new branch 'round2b'
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ touch file3.txt
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ c9 file3.txt
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git status
+On branch round2b
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        file3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git add .
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git status
+On branch round2b
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   file3.txt
+
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git commit -m "Create a new branch and create a new file with three lines in this branch."
+[round2b 1586299] Create a new branch and create a new file with three lines in this branch.
+ 1 file changed, 3 insertions(+)
+ create mode 100644 file3.txt
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git status
+On branch round2b
+nothing to commit, working tree clean
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git merge master
+Already up-to-date.
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git hist --all
+git: 'hist' is not a git command. See 'git --help'.
+
+The most similar command is
+        bisect
+surekhasrinivasan:~/workspace/round1b (round2b) $ git status
+On branch round2b
+nothing to commit, working tree clean
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git checkout round2b
+Already on 'round2b'
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git checkout round1b
+error: pathspec 'round1b' did not match any file(s) known to git.
+surekhasrinivasan:~/workspace/round1b (round2b) $ git checkout master
+Switched to branch 'master'
+
+surekhasrinivasan:~/workspace/round1b (master) $ git checkout round2b
+Switched to branch 'round2b'
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git merge master
+Already up-to-date.
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git status
+On branch round2b
+nothing to commit, working tree clean
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git status
+On branch round2b
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git add .
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git status
+On branch round2b
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   file3.txt
+
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git commit -m "Merge this branch to the Master branch. Make another edit to a file."
+[round2b 209e34b] Merge this branch to the Master branch. Make another edit to a file.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git status
+On branch round2b
+nothing to commit, working tree clean
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ cd ..
+
+surekhasrinivasan:~/workspace $ cd round1b
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git checkout master
+Switched to branch 'master'
+
+surekhasrinivasan:~/workspace/round1b (master) $ git checkout -b round3b
+Switched to a new branch 'round3b'
+
+surekhasrinivasan:~/workspace/round1b (round3b) $ git status
+On branch round3b
+nothing to commit, working tree clean
+
+surekhasrinivasan:~/workspace/round1b (round3b) $ git commit -m "Create a new branch."
+On branch round3b
+nothing to commit, working tree clean
+surekhasrinivasan:~/workspace/round1b (round3b) $ git status
+On branch round3b
+nothing to commit, working tree clean
+
+surekhasrinivasan:~/workspace/round1b (round3b) $ rm file3.txt
+rm: cannot remove �file3.txt�: No such file or directory
+
+surekhasrinivasan:~/workspace/round1b (round3b) $ git checkout master
+Switched to branch 'master'
+
+surekhasrinivasan:~/workspace/round1b (master) $ rm file3.txt
+rm: cannot remove �file3.txt�: No such file or directory
+
+surekhasrinivasan:~/workspace/round1b (master) $ git checkout round2b
+Switched to branch 'round2b'
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ rm file3.txt
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git status
+On branch round2b
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    file3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git add .
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git commit -m "Delete a file."
+[round2b ae6c380] Delete a file.
+ 1 file changed, 3 deletions(-)
+ delete mode 100644 file3.txt
+
+surekhasrinivasan:~/workspace/round1b (round2b) $ git status
+On branch round2b
+nothing to commit, working tree clean
